@@ -1,0 +1,39 @@
+<script src="http://localhost/playground//assets/jquery/js/jquery1.9.js"></script>
+<script src="clsTimer.js"></script>
+<div id="clock1" class="timer">00:00:00.0</div>
+<div id="clock2" class="timer">00:00:00</div>
+<div id="clock3" class="timer">00:00:00</div>
+<script>
+/*
+Available options
+defaults = {
+    seconds: 3600,
+    format: 'hh:mm:ss.ff',
+    target: 'timer',
+    defaultEndMsg: 'Bye',
+    showTimer: 1,
+    formId: '#frm',
+    timeup: '#timeup',
+    clock: '#clock',
+    seperator: ":"
+};
+*/
+var options1 = {"seconds":13600,"target":"#clock1",format: 'hh:mm:ss.ff'};
+var obj1 = new Timer(options1);
+obj1.start();
+
+var options2 = {"seconds":600,"target":"#clock2",format: 'hh:mm:ss'};
+var obj2 = new Timer(options2);
+obj2.start();
+
+var options3 = {"seconds":20,"target":"#clock3",format: 'mm:ss'};
+var obj3 = new Timer(options3);
+obj3.start();
+</script>
+
+<style>
+.timer
+{
+    font-size:40px;
+}
+</style>
